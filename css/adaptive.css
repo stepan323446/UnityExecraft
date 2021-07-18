@@ -1,0 +1,110 @@
+@media only screen and (max-width: 1077px)
+{
+    html.lock
+    {
+        overflow: hidden;
+    }
+    .burger
+    {
+        position: relative;
+        display: block;
+        width: 50px;
+        height: 50px;
+        z-index: 1000;
+    }
+    .burger::after
+    {
+        content: '';
+        position: absolute;
+        height: 2px;
+        width: 100%;
+        background-color: #fff;
+        top: 10px;
+        left: 0;
+        transition: 0.4s ease;
+    }
+    .burger::before
+    {
+        content: '';
+        position: absolute;
+        height: 2px;
+        width: 100%;
+        background-color: #fff;
+        bottom: 10px;
+        left: 0;
+        transition: 0.4s ease;
+    }
+    .burger span
+    {
+        position: absolute;
+        height: 2px;
+        width: 100%;
+        background-color: #fff;
+        top: 23px;
+        left: 0;
+        transition: 0.4s ease;
+    }
+    .burger.active span
+    {
+        transform: scale(0);
+    }
+    .burger.active::before
+    {
+        transform: rotateZ(-45deg);
+        bottom: 26px;
+    }
+    .burger.active::after
+    {
+        transform: rotateZ(45deg);
+        top: 21px;
+    }
+
+    .burger-panel
+    {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: -100%;
+        background-color: rgb(36, 36, 36);
+        flex-direction: column;
+        justify-content: center !important;
+        align-items: flex-start !important;
+
+        overflow: auto;
+        transition: 0.5s ease;
+    }
+    .burger-panel.active
+    {
+        left: 0;
+    }
+    .burger-panel a
+    {
+        font-size: 40px;
+        margin-bottom: 50px;
+    }
+    .main-header
+    {
+        padding: 0 10px;
+    }
+    .main-header h1
+    {
+        z-index: 1000;
+    }
+}
+
+@media only screen and (max-width: 1042px)
+{
+    .right-block
+    {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 488px)
+{
+    h1
+    {
+        font-size: 40px;
+    }
+}

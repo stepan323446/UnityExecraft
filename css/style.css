@@ -8,11 +8,18 @@
 }
 a{
     display: inline-block;
+    color: #dd8717;
+}
+body
+{
+    min-height: 100vh;
 }
 body.start
 {
     position: relative;
     background-image: url(../images/Test.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .main-header
 {
@@ -91,6 +98,10 @@ body.start
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+.burger
+{
+    display: none;
 }
 h1
 {
@@ -377,6 +388,7 @@ span.yellow
 {
     max-width: 1200px;
     margin: 40px auto;
+    padding: 0 10px;
 }
 .page-container h1
 {
@@ -433,4 +445,8 @@ footer
     color: #fff;
     font-size: 25px;
     text-transform: uppercase;
+}
+.footer-text
+{
+    text-align: center;
 }

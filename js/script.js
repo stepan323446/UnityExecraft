@@ -1,3 +1,11 @@
+$(function(){
+    $('.burger').click(function(e){
+        $('.burger').toggleClass('active');
+        $('.burger-panel').toggleClass('active');
+        $('html').toggleClass('lock');
+    });
+});
+
 new Swiper('.site-slider', {
     pagination:
     {
