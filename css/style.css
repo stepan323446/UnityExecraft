@@ -1,0 +1,436 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*
+{
+    box-sizing: border-box;
+    font-family: 'Roboto Slab', serif;
+}
+a{
+    display: inline-block;
+}
+body.start
+{
+    position: relative;
+    background-image: url(../images/Test.jpg);
+}
+.main-header
+{
+    position: absolute;
+    width: 100%;
+    z-index: 100;
+}
+.header-inner
+{
+    max-width: 1030px;
+    margin: 0 auto;
+    padding: 25px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-inner h1
+{
+    font-size: 25px;
+    margin-right: 50px;
+}
+.main-header ul
+{
+    width: 100%;
+    display: flex;
+    list-style: none;
+    justify-content: flex-end;
+}
+.main-header a
+{
+    position: relative;
+
+    font-family: 'Roboto Slab', serif;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    text-decoration: none;
+    margin-left: 40px;
+}
+.main-header a::after
+{
+    content: '';
+    bottom: -13px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    height: 2px;
+    width: 120%;
+
+    transition: ease 0.3s;
+}
+.main-header a:hover:after
+{
+    bottom: -5px;
+    background-color: rgb(255, 157, 28);
+}
+.site-slider
+{
+    background-color: rgba(0, 0, 0, 0.486);
+}
+.slide
+{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    padding-top: 68px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main-slide
+{
+    padding-top: 0px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+h1
+{
+    font-size: 70px;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+    color: #fff;
+}
+h1.h1_unity-text
+{
+    margin-top: 20px;
+    color: #ff9d1c;
+}
+h2
+{
+    text-align: center;
+    margin-top: 20px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 25px;
+    text-transform: uppercase;
+    color: rgb(219, 219, 219);
+}
+.swipe-go
+{
+    position: absolute;
+    bottom: 30px;
+    right: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@keyframes anim_swipe-go
+{
+    0%
+    {
+        right: -50px;
+    }
+    50%
+    {
+        right: -60px;
+    }
+    100%
+    {
+        right: -50px;
+    }
+}
+.swipe-go img
+{
+    height: 45px;
+    position: absolute;
+    animation: anim_swipe-go 1.2s  ease-in-out infinite;
+}
+.swipe-go__text
+{
+    font-family: 'Roboto Slab', serif;
+    text-transform: uppercase;
+    font-size: 20px;
+    padding-bottom: 1px;
+    color: #fff;
+}
+.swiper-pagination-progressbar
+{
+    width: 100%;
+    height: 5px;
+    bottom: 0;
+}
+.swiper-pagination-progressbar-fill
+{
+    --swiper-theme-color: rgb(255, 157, 28);
+}
+.container
+{
+    max-width: 1020px;
+    margin: 0 auto;
+}
+.horizontal-align
+{
+    display: flex;
+    justify-content: space-between;
+}
+h3
+{
+    position: relative;
+    font-size: 40px;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    color: #fff;
+}
+h3::before
+{
+    content: '';
+    position: absolute;
+    background-color: #ff9d1c;
+    height: 5px;
+    width: 0%;
+    bottom: -10px;
+    transition: 1s ease-in-out 0.5s;
+}
+.swiper-slide-active h3::before
+{
+    width: 50%;
+}
+
+.left-block
+{
+    max-width: 450px;
+    margin-right: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.block-text
+{
+    margin-top: 30px;
+    position: relative;
+    margin-bottom: 20px;
+
+    font-family: 'Roboto Slab', serif;
+    color: rgb(226, 226, 226);
+    line-height: 27px;
+}
+span.bold
+{
+    font-weight: 700;
+}
+span.italic
+{
+    font-style: italic;
+}
+span.yellow
+{
+    color: #ff9d1c;
+}
+.img_preview
+{
+    position: relative;
+    width: 100%;
+    padding: 10px;
+    z-index: 2;
+    background-color: #ffbd66;
+    overflow: hidden;
+}
+.img_preview__info
+{
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 700;
+    color: #000;
+    font-size: 15px;
+    text-transform: uppercase;
+    background-color: #ffbd66;
+    padding: 10px;
+    bottom: -40px;
+    left: 0;
+
+    transition: 0.3s ease;
+}
+.img_preview:hover .img_preview__info
+{
+    bottom: 0;
+}
+.btn-link
+{
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Oswald', sans-serif;
+    font-size: 25px;
+    
+    border-radius: 3px;
+    background-color: #ff9d1c;
+    overflow: hidden;
+
+    padding: 20px 40px 20px 40px;
+    z-index: 2;
+    transition: 0.3s ease;
+
+    margin-right: 20px;
+}
+.btn-link.btn-discord-link
+{
+    background-color: rgb(32, 34, 37);
+}
+.btn-link div
+{
+    font-family: 'Roboto Slab', serif;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0px;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffcc8a;
+    z-index: 1;
+    transition: 0.3s ease;
+}
+.btn-link.btn-discord-link div
+{
+    background-color: rgb(54, 57, 63);
+}
+.btn-link:hover
+{
+    padding: 20px 60px 20px 20px;
+}
+.btn-link:hover div
+{
+    width: 40px;
+}
+.btn-link img
+{
+    width: 25px;
+}
+.img_preview img
+{
+    width: 100%;
+}
+.reverse
+{
+    flex-direction: row-reverse;
+}
+.reverse .right-block
+{
+    margin-right: 30px;
+}
+.reverse .left-block
+{
+    margin-right: 0px;
+}
+.end-screen
+{
+    flex-direction: column;
+}
+
+/* Other pages */
+.page-header
+{
+    position: relative;
+    width: 100%;
+    background-image: url(../images/stone.png);
+    background-size: 30px;
+
+    border-bottom: 3px #000 solid;
+}
+.back-main
+{
+    height: 50px;
+    width: 70px;
+    padding-left: 20px;
+    align-items: center;
+    text-decoration: none;
+    background-color: rgb(39, 39, 39);
+    border-right: 3px #000 solid;
+    display: flex;
+
+    overflow: hidden;
+    transition: 0.3s ease;
+}
+.back-main__text
+{
+    margin-left: 20px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 25px;
+}
+.back-main img
+{
+    height: 30px;
+    width: 30px;
+}
+.back-main:hover
+{
+    width: 150px;
+}
+.page-container
+{
+    max-width: 1200px;
+    margin: 40px auto;
+}
+.page-container h1
+{
+    color: #000;
+}
+.h1-pre
+{
+    margin-top: 30px;
+    text-transform: uppercase;
+    font-size: 25px;
+    text-align: center;
+}
+.page-header h4
+{
+    font-family: 'Oswald', sans-serif;
+    position: absolute;
+    color: #fff;
+    text-transform: uppercase;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 50px;
+    font-size: 25px;
+}
+.rules-block
+{
+    margin-top: 50px;
+}
+.rules-text
+{
+    font-size: 20px;
+    line-height: 27px;
+}
+.rules-text__selection
+{
+    margin-top: 20px;
+}
+.rules-text__selection h5
+{
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+.rules-text__selection p
+{
+    margin-bottom: 15px;
+}
+footer
+{
+    background-image: url(../images/stone.png);
+    background-size: 30px;
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 25px;
+    text-transform: uppercase;
+}
