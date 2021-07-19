@@ -93,9 +93,82 @@
     }
 }
 
-@media only screen and (max-width: 1042px)
+@media only screen and (max-width: 800px)
 {
     .right-block
+    {
+        display: none;
+    }
+    .takes-list .item
+    {
+        flex-direction: column;
+    }
+    .takes-list .item .text
+    {
+        margin-left: 0;
+        text-align: center;
+    }
+    #mini-form label
+    {
+        max-width: 500px;
+    }
+    #mini-form
+    {
+        flex-direction: column-reverse;
+    }
+    #check-yes
+    {
+        margin-top: 30px;
+    }
+}
+@media only screen and (max-width: 770px)
+{
+    .villages-cards
+    {
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+    .card
+    {
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+    }
+    .card > *
+    {
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+    }
+    .card-nickname
+    {
+        display: none;
+    }
+    .card-name
+    {
+        margin: 0 20px;
+    }
+    .card-otherinfo
+    {
+        margin-right: 20px;
+    }
+    
+}
+
+@media only screen and (max-width: 650px)
+{
+    .card > a
+    {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 544px)
+{
+    .card
+    {
+        justify-content: center;
+    }
+    .card-otherinfo
     {
         display: none;
     }
@@ -106,5 +179,14 @@
     h1
     {
         font-size: 40px;
+    }
+    .common-text
+    {
+        font-size: 18px;
+        line-height: 27px;
+    }
+    .poll .descpr
+    {
+        font-size: 17px;
     }
 }

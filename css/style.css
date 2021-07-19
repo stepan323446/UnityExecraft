@@ -6,6 +6,10 @@
     box-sizing: border-box;
     font-family: 'Roboto Slab', serif;
 }
+html
+{
+    scroll-behavior: smooth;
+}
 a{
     display: inline-block;
     color: #dd8717;
@@ -13,6 +17,7 @@ a{
 body
 {
     min-height: 100vh;
+    
 }
 body.start
 {
@@ -124,6 +129,14 @@ h2
     font-size: 25px;
     text-transform: uppercase;
     color: rgb(219, 219, 219);
+}
+h2.black
+{
+    color: #000;
+}
+h2.more-fontsize
+{
+    font-size: 35px;
 }
 .swipe-go
 {
@@ -237,6 +250,10 @@ span.yellow
 {
     color: #ff9d1c;
 }
+.h1span
+{
+    font-family: 'Oswald', sans-serif;
+}
 .img_preview
 {
     position: relative;
@@ -284,6 +301,14 @@ span.yellow
     transition: 0.3s ease;
 
     margin-right: 20px;
+}
+.btn-link.disable
+{
+    background-color: #303030;
+}
+.btn-link.disable div
+{
+    background-color: #a8a8a8;
 }
 .btn-link.btn-discord-link
 {
@@ -390,6 +415,12 @@ span.yellow
     margin: 40px auto;
     padding: 0 10px;
 }
+.page-container2
+{
+    max-width: 1200px;
+    margin: 0px auto;
+    padding: 0 10px;
+}
 .page-container h1
 {
     color: #000;
@@ -434,6 +465,372 @@ span.yellow
 {
     margin-bottom: 15px;
 }
+.title_panel
+{
+    position: relative;
+    background-image: url(../images/democratuy_black.png);
+    background-attachment: fixed;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.please-down
+{
+    position: absolute;
+    bottom: 120px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+@keyframes please-down__img_anim
+{
+    0%
+    {
+        top: 15px;
+    }
+    50%
+    {
+        
+        top: 25px;
+    }
+    100%
+    {
+        top: 15px;
+    }
+}
+.please-down img
+{
+    position: absolute;
+    width: 60px;
+    left: 50%;
+    transform: translateX(-50%) rotateZ(90deg);
+    animation: please-down__img_anim 1.2s  ease-in-out infinite;
+}
+.who-is-bravler
+{
+    margin-top: 100px;
+}
+.who-is-bravler .common-text
+{
+    text-align: center;
+}
+section
+{
+    margin-top: 110px;
+}
+section h2
+{
+    margin-bottom: 50px;
+}
+.common-text
+{
+    margin-top: 10px;
+    font-size: 24px;
+    line-height: 36px;
+}
+.title-count-villager
+{
+    margin-top: 120px;
+    display: flex;
+    justify-content: space-between;
+}
+.villages-cards
+{
+    margin-top: 40px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.card
+{
+    position: relative;
+    width: 350px;
+    padding: 15px;
+    background-color: rgb(245, 245, 245);
+    border: 2px rgb(179, 179, 179) solid;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin: 0 10px;
+    transition: 0.2s ease;
+    margin-bottom: 20px;
+}
+.card:hover
+{
+    transform: scale(1.1);
+}
+.main-card
+{
+    border: 4px rgb(182, 15, 15) solid;
+}
+.main-card::after
+{
+    content: 'Мэр';
+    position: absolute;
+    top: -15px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 200px;
+    padding: 5px 0;
+    background-color: rgb(182, 15, 15);
+    color: #fff;
+    font-weight: 700;
+    border-radius: 30px;
+    font-family: 'Oswald', sans-serif;
+}
+
+.card > img
+{
+    max-width: 100px;
+    max-height: 100px;
+    margin-top: 25px;
+    border-radius: 50%;
+}
+.card .btn-link
+{
+    margin-right: 0;
+}
+.card-name
+{
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    text-transform: uppercase;
+    margin-top: 30px;
+}
+.card-nickname
+{
+    font-style: italic;
+}
+.card-otherinfo
+{
+    width: 100%;
+    margin-top: 25px;
+    margin-bottom: 50px;
+    font-size: 18px;
+}
+.card-str
+{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+.card-str .main
+{
+    font-weight: 700;
+}
+.polls
+{
+    margin-top: 20px;
+}
+.polls a
+{
+    text-decoration: none;
+}
+.poll
+{
+    position: relative;
+    display: flex;
+    padding: 15px;
+    padding-left: 80px;
+    background-color: #ffcc8a;
+    border-radius: 7px;
+    color: #000;
+    font-size: 20px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+.poll .number
+{
+    position: absolute;
+    width: 60px;
+    height: 100%;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 40px;
+    font-weight: 700;
+    font-family: 'Oswald', sans-serif;
+    background-color: #dd8717;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+.poll .descpr
+{
+    line-height: 27px;
+}
+.poll::before
+{
+    content: 'Узнать подробнее';
+    position: absolute;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    font-size: 18px;
+    right: 0;
+    bottom: 0px;
+    color: #fff;
+
+    padding: 0px;
+    height: 0;
+
+    overflow: hidden;
+    border-top-left-radius: 5px;
+    background-color: rgb(39, 39, 39);
+    transition: 0.3s ease;
+}
+.poll:hover::before
+{
+    padding: 7px;
+    height: auto;
+}
+
+.how-to-become-bravler
+{
+    margin-top: 110px;
+}
+.how-to-become-bravler h2
+{
+    text-align: end;
+}
+.how-to-become-bravler .common-text
+{
+    text-align: end;
+}
+
+#what-do-you-can-take h2
+{
+    text-align: start;
+}
+#what-do-you-can-take .common-text
+{
+    text-align: start;
+}
+.what-do-you-can-take__inner
+{
+    display: flex;
+    flex-direction: column;
+}
+.takes-list
+{
+    margin: 40px auto;
+}
+.takes-list .item
+{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.takes-list .image img
+{
+    width: 100%;
+}
+.takes-list .image
+{
+    width: 80px;
+}
+.takes-list .text
+{
+    margin-left: 40px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 25px;
+    transition: 0.3s ease;
+}
+.takes-list .item:hover .text
+{
+    transform: translateX(+10px);
+}
+.give-sumbit__inner
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#mini-form
+{
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+}
+#mini-form label
+{
+    font-size: 24px;
+}
+#check-yes
+{
+    width: 25px;
+    height: 25px;
+    margin-right: 20px;
+}
+#mini-form input
+{
+    position: relative;
+    -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+    background-color: #fff;
+    border: 2px solid #868686;
+    border-radius: 3px;
+    cursor: pointer;
+}
+#mini-form input:checked
+{
+    background-color: #dd8717;
+    border: 2px solid #dd8717;
+}
+#mini-form input:checked:after
+{
+    content: "";
+    position: absolute;
+    background-image: url(../images/check-mark.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    z-index: 4;
+}
+@keyframes warn-anim
+{
+    0%
+    {
+        transform: translateX(0);
+    }
+    40%
+    {
+        transform: translateX(+20px);
+    }
+    80%
+    {
+        transform: translateX(-20px);
+    }
+    100%
+    {
+        transform: translateX(0);
+    }
+}
+.warn-non-press
+{
+    animation: 0.3s linear 0s 2 both running warn-anim;
+}
+.give-submit
+{
+    margin-bottom: 200px;
+}
+
 footer
 {
     background-image: url(../images/stone.png);
@@ -450,3 +847,4 @@ footer
 {
     text-align: center;
 }
+
