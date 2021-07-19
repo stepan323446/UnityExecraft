@@ -830,6 +830,73 @@ section h2
 {
     margin-bottom: 200px;
 }
+.why-need-textures h2
+{
+    text-align: left;
+}
+.why-need-textures
+{
+    text-align: left;
+}
+.why-need-textures__inner
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.block-textures,
+.why-need-text-image
+{
+    max-width: 600px;
+}
+.why-need-text-image
+{
+    margin-left: 10px;
+}
+.why-need-text-image img
+{
+    width: 100%;
+    border-radius: 5px;
+}
+.ad__inner
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.ad__inner .text
+{
+    text-transform: uppercase;
+    font-size: 25px;
+    font-weight: 700;
+}
+.ad__inner .item
+{
+    margin-bottom: 50px;
+}
+.download
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+.download a
+{
+    width: 400px;
+    text-align: center;
+}
+.title-textures
+{
+    background-image: url(../images/texth-vack.png);
+}
+.how-install
+{
+    margin-bottom: 100px;
+}
 
 footer
 {

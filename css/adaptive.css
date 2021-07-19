@@ -91,6 +91,14 @@
     {
         z-index: 1000;
     }
+    .why-need-textures__inner
+    {
+        flex-direction: column;
+    }
+    .why-need-text-image
+    {
+        margin-top: 30px;
+    }
 }
 
 @media only screen and (max-width: 800px)
