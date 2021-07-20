@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 @media only screen and (max-width: 1077px)
 {
     html.lock
@@ -21,6 +28,8 @@
         background-color: #fff;
         top: 10px;
         left: 0;
+        -webkit-transition: 0.4s ease;
+        -o-transition: 0.4s ease;
         transition: 0.4s ease;
     }
     .burger::before
@@ -32,6 +41,8 @@
         background-color: #fff;
         bottom: 10px;
         left: 0;
+        -webkit-transition: 0.4s ease;
+        -o-transition: 0.4s ease;
         transition: 0.4s ease;
     }
     .burger span
@@ -42,20 +53,28 @@
         background-color: #fff;
         top: 23px;
         left: 0;
+        -webkit-transition: 0.4s ease;
+        -o-transition: 0.4s ease;
         transition: 0.4s ease;
     }
     .burger.active span
     {
-        transform: scale(0);
+        -webkit-transform: scale(0);
+            -ms-transform: scale(0);
+                transform: scale(0);
     }
     .burger.active::before
     {
-        transform: rotateZ(-45deg);
+        -webkit-transform: rotateZ(-45deg);
+            -ms-transform: rotate(-45deg);
+                transform: rotateZ(-45deg);
         bottom: 26px;
     }
     .burger.active::after
     {
-        transform: rotateZ(45deg);
+        -webkit-transform: rotateZ(45deg);
+            -ms-transform: rotate(45deg);
+                transform: rotateZ(45deg);
         top: 21px;
     }
 
@@ -67,11 +86,20 @@
         top: 0;
         left: -100%;
         background-color: rgb(36, 36, 36);
-        flex-direction: column;
-        justify-content: center !important;
-        align-items: flex-start !important;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: center !important;
+            -ms-flex-pack: center !important;
+                justify-content: center !important;
+        -webkit-box-align: start !important;
+            -ms-flex-align: start !important;
+                align-items: flex-start !important;
 
         overflow: auto;
+        -webkit-transition: 0.5s ease;
+        -o-transition: 0.5s ease;
         transition: 0.5s ease;
     }
     .burger-panel.active
@@ -93,7 +121,10 @@
     }
     .why-need-textures__inner
     {
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
     }
     .why-need-text-image
     {
@@ -115,7 +146,10 @@
     }
     .takes-list .item
     {
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
     }
     .takes-list .item .text
     {
@@ -128,7 +162,10 @@
     }
     #mini-form
     {
-        flex-direction: column-reverse;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+            -ms-flex-direction: column-reverse;
+                flex-direction: column-reverse;
     }
     #check-yes
     {
@@ -136,8 +173,13 @@
     }
     #calculator
     {
-        flex-direction: column;
-        align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
     }
     #calculator > div
     {
@@ -148,13 +190,22 @@
 {
     .villages-cards
     {
-        flex-direction: column;
-        flex-wrap: nowrap;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
     }
     .card
     {
-        flex-direction: row;
-        align-items: center;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         width: 100%;
     }
     .card > *
@@ -194,7 +245,9 @@
 {
     .card
     {
-        justify-content: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
     }
     .card-otherinfo
     {
