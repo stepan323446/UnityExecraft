@@ -250,6 +250,14 @@ span.yellow
 {
     color: #ff9d1c;
 }
+.purple
+{
+    color: #861cff !important;
+}
+span.execolor
+{
+    color: #494949;
+}
 .h1span
 {
     font-family: 'Oswald', sans-serif;
@@ -603,6 +611,8 @@ section h2
     font-size: 30px;
     text-transform: uppercase;
     margin-top: 30px;
+    text-align: center;
+    line-height: 40px;
 }
 .card-nickname
 {
@@ -896,6 +906,295 @@ section h2
 .how-install
 {
     margin-bottom: 100px;
+}
+.value h2,
+.value .common-text
+{
+    text-align: end;
+}
+
+.value-list
+{
+    margin-top: 60px;
+}
+.value-list .item
+{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 100px;
+}
+
+/* Стрелки */
+@keyframes anim-arrow-before
+{
+    0%
+    {
+        transform: translateX(-100px);
+    }
+    50%
+    {
+        transform: translateX(-110px);
+    }
+    100%
+    {
+        transform: translateX(-100px);
+    }
+}
+@keyframes anim-arrow-after
+{
+    0%
+    {
+        transform: translateX(-50px);
+    }
+    50%
+    {
+        transform: translateX(-60px);
+    }
+    100%
+    {
+        transform: translateX(-50px);
+    }
+}
+.value-list .item::before,
+.value-list .item::after
+{
+    content: '';
+    position: absolute;
+    width: 129px;
+    height: 129px;
+    background-image: url(../images/rightarrow_black.svg);
+    left: 50%;
+    transform: translateX(-50px);
+}
+.value-list .item::before
+{
+    transform: translateX(-100px);
+    animation: anim-arrow-before 1.2s  ease-in-out infinite;
+}
+.value-list .item::after
+{
+    animation: anim-arrow-after 1.2s  ease-in-out infinite;
+}
+/* === */
+.pre-item
+{
+    display: flex;
+    align-items: center;
+}
+.num-val
+{
+    font-family: 'Oswald', sans-serif;
+    font-weight: 800;
+    font-size: 50px;
+}
+.num-val.left
+{
+    margin-left: 70px;
+}
+.num-val.right
+{
+    margin-right: 70px;
+}
+.img-val
+{
+    position: relative;
+}
+.name-val
+{
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #000;
+    border-radius: 5px;
+    border: 2px #303030 solid;
+    padding: 5px 20px;
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+
+    opacity: 0;
+    transition: 0.3s ease;
+}
+.img-val:hover .name-val
+{
+    opacity: 1;
+}
+/* Dropdown */
+.dropdown
+{
+    position: relative;
+}
+.dropdown img
+{
+    width: 100%;
+}
+.selected
+{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    padding-right: 50px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    font-size: 15px;
+
+    border: 2px #303030 solid;
+    cursor: pointer;
+    background-color: #fff;
+}
+.selected::after
+{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    transform: rotateZ(90deg);
+    right: 10px;
+    background-image: url(../images/rightarrow_black.svg);
+    transition: 0.3s ease;
+}
+.dropdown.clicked .selected::after
+{
+    transform: rotateZ(-90deg);
+}
+.selected .item-img
+{
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+.selected .item-text
+{
+
+}
+
+.selecters
+{
+    position: absolute;
+    bottom: -393%;
+    left: 50%;
+    width: 100%;
+    overflow: hidden;
+
+    transform: translateX(-50%);
+    border: 2px #303030 solid;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: #fff;
+
+    display: none;
+}
+.dropdown.clicked .selecters
+{
+    display: block;
+}
+.selecters .item
+{
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #494949;
+    cursor: pointer;
+}
+.selecters .item:hover
+{
+    background-color: #ffcc8a;
+}
+.selecters .item-img
+{
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+#calculator
+{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+#calculator span
+{
+    position: absolute;
+    background-image: url(../images/rightarrow_black.svg);
+    height: 30px;
+    width: 30px;
+    top: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#calculator::after
+{
+    content: '';
+    position: absolute;
+    background-image: url(../images/rightarrow_black.svg);
+    height: 70px;
+    width: 70px;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#calculator > div
+{
+    max-width: 500px;
+    width: 100%;
+}
+#input-value
+{
+    font-size: 40px;
+    padding: 13px;
+    width: 100%;
+    margin-top: 40px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    border: 2px #303030 solid;
+    border-radius: 5px;
+}
+#input-value:focus
+{
+    outline: none;
+    border: 2px #dd8717 solid;
+}
+#result
+{
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    padding: 13px;
+    width: 100%;
+    margin-top: 40px;
+    text-align: end;
+    font-size: 40px;
+}
+#ostatoc
+{
+    width: 100%;
+    text-align: end;
+}
+.business h2
+{
+    text-align: left;
+}
+.nalog
+{
+    margin-bottom: 100px;
+}
+.cost
+{
+    font-size: 30px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    color: #dd8717;
+    text-transform: uppercase;
+}
+.item-bank
+{
+    justify-content: space-between;
 }
 
 footer

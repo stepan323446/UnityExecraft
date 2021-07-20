@@ -99,6 +99,12 @@
     {
         margin-top: 30px;
     }
+
+    #calculator span,
+    #calculator::after
+    {
+        display: none;
+    }
 }
 
 @media only screen and (max-width: 800px)
@@ -127,6 +133,15 @@
     #check-yes
     {
         margin-top: 30px;
+    }
+    #calculator
+    {
+        flex-direction: column;
+        align-items: center;
+    }
+    #calculator > div
+    {
+        margin-bottom: 50px;
     }
 }
 @media only screen and (max-width: 770px)
@@ -168,6 +183,11 @@
     {
         display: none;
     }
+    .value-list .item::before,
+    .value-list .item::after
+    {
+        display: none;
+    }
 }
 
 @media only screen and (max-width: 544px)
@@ -179,6 +199,15 @@
     .card-otherinfo
     {
         display: none;
+    }
+    .img-val
+    {
+        width: 64px;
+        height: 64px;
+    }
+    .img-val img
+    {
+        width: 100%;
     }
 }
 
@@ -196,5 +225,36 @@
     .poll .descpr
     {
         font-size: 17px;
+    }
+    
+}
+@media only screen and (max-width: 414px)
+{
+    h1
+    {
+        font-size: 40px;
+    }
+    .common-text
+    {
+        font-size: 18px;
+        line-height: 27px;
+    }
+    .poll .descpr
+    {
+        font-size: 17px;
+    }
+    .img-val
+    {
+        width: 64px;
+        height: 64px;
+    }
+    .num-val
+    {
+        font-size: 30px;
+        margin-left: 20px !important;
+    }
+    .num-val.right
+    {
+        margin-right: 20px !important;
     }
 }
